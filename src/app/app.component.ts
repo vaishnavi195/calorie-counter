@@ -9,4 +9,5 @@ export class AppComponent {
   name = 'Angular ' + VERSION.major;
   Title = 'Calorie Counter';
   Foodlist: string[] = ['food1', 'food1', 'food1', 'food1'];
+  caloriecnt: number[] = [];
 }

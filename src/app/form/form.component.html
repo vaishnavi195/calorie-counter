@@ -1,7 +1,18 @@
 <label for="txtfood">Enter Food name</label>
-<input type="text" id="txtfood" class="form-control" placeholder="Food name" />
+<input
+  type="text"
+  id="txtfood"
+  class="form-control"
+  [(ngModel)]="foodname"
+  placeholder="Food name"
+/>
 <label for="sel1">Select Food Type</label>
-<select class="form-control" id="sel1">
+<select
+  class="form-control"
+  id="sel1"
+  [(ngModel)]="foodtype"
+  placeholder="Select Food Type"
+>
   <option default>Select Food Type</option>
   <option>Breakfast</option>
   <option>Lunch</option>
@@ -9,9 +20,21 @@
   <option>Snack</option>
 </select>
 <label for="txtqn">Enter Quantity</label>
-<input type="number" id="txtqn" class="form-control" placeholder="Food name" />
+<input
+  type="number"
+  id="txtqn"
+  class="form-control"
+  [(ngModel)]="foodquan"
+  placeholder="Food name"
+/>
 <label for="txtcal">Enter Calorie</label>
-<input type="number" id="txtcal" class="form-control" placeholder="Food name" />
+<input
+  type="number"
+  id="txtcal"
+  class="form-control"
+  [(ngModel)]="foodcal"
+  placeholder="Food name"
+/>
 <button type="submit" (click)="AddMeal()" class="btn btn-outline-primary my-3">
   Add New Meal
 </button>
