@@ -8,6 +8,31 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   Title = 'Calorie Counter';
-  Foodlist: string[] = ['food1', 'food1', 'food1', 'food1'];
+  Foodlist: any[] = [
+    {
+      Foodname: 'idli',
+      FoodType: 'Breakfast',
+      quantity: '100gms',
+      calorie: 200,
+    },
+    {
+      Foodname: 'dosa',
+      FoodType: 'Breakfast',
+      quantity: '100gms',
+      calorie: 200,
+    },
+    {
+      Foodname: 'sambar sadham',
+      FoodType: 'Breakfast',
+      quantity: '100gms',
+      calorie: 200,
+    },
+    {
+      Foodname: 'chapathi',
+      FoodType: 'Breakfast',
+      quantity: '100gms',
+      calorie: 200,
+    },
+  ];
   caloriecnt: number[] = [];
 }

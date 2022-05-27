@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   @Input() Foodlist;
   constructor() {}
-
+  Remove(i: number) {
+    this.Foodlist.splice(i, 1);
+  }
   ngOnInit() {}
 }

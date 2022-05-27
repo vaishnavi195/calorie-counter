@@ -17,20 +17,22 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {}
   AddMeal() {
-    this.caloriecnt.push(this.foodcal);
-    const result = this.caloriecnt.reduce((accumulator, current) => {
-      return accumulator + current;
-    }, 0);
-    console.log(result);
-    
+    console.log(this.foodtype);
     this.Foodlist.unshift(
-      this.foodname +
-        '|' +
-        this.foodtype +
-        '|' +
-        this.foodquan +
-        '|' +
-        this.foodcal
+      {
+        Foodname: this.foodname,
+        FoodType: this.foodtype,
+        quantity: this.foodquan,
+        calorie: this.foodcal,
+      }
+
+      // this.foodname +
+      //   '|' +
+      //   this.foodtype +
+      //   '|' +
+      //   this.foodquan +
+      //   '|' +
+      //   this.foodcal
     );
   }
 }
