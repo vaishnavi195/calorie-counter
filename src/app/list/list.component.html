@@ -6,16 +6,23 @@
     {{ food }}<button class="btn btn-outline-danger">delete</button>
   </li>
 </ul>
-
+<input
+  type="text"
+  id="search"
+  class="form-control"
+  placeholder="Search Text"
+  [(ngModel)]="searchText"
+/>
 <table class="tableclass">
   <tr style="font-weight:bold">
     <td>Food name</td>
     <td>Food Type</td>
     <td>Quantity Consumed</td>
+
     <td>Calories</td>
     <td>Action</td>
   </tr>
-  <tr *ngFor="let food of Foodlist; let i = index">
+  <tr *ngFor="let food of Foodlist ;let i = index">
     <td>{{ food.Foodname }}</td>
     <td>{{ food.FoodType }}</td>
     <td>{{ food.quantity }}</td>

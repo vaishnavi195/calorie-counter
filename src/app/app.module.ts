@@ -7,9 +7,11 @@ import { HelloComponent } from './hello.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 
+import { FilterPipe } from './filter.pipe';
+
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, FormComponent,ListComponent],
+  declarations: [AppComponent, HelloComponent, FormComponent,ListComponent,FilterPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

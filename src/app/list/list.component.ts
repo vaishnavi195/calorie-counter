@@ -8,10 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   @Input() Foodlist;
   @Input() result;
+  searchText = '';
   constructor() {}
   Remove(i: number) {
     this.Foodlist.splice(i, 1);
-    localStorage.setItem('FoodList', this.Foodlist);
+    localStorage.setItem('FoodList', JSON.stringify(this.Foodlist));
   }
   ngOnInit() {}
 }

@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
     return accumulator + obj.calorie;
   }, 0);
 
-  ngOnInit(){
-
+  ngOnInit() {
+    this.Foodlist = JSON.parse(localStorage.getItem('FoodList'));
   }
 }

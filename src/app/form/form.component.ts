@@ -38,6 +38,6 @@ export class FormComponent implements OnInit {
     this.result = this.Foodlist.reduce((accumulator, obj) => {
       return accumulator + obj.calorie;
     }, 0);
-    localStorage.setItem("FoodList",this.Foodlist)
+    localStorage.setItem('FoodList', JSON.stringify(this.Foodlist));
   }
 }
