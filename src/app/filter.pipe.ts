@@ -14,8 +14,8 @@ export class FilterPipe implements PipeTransform {
     }
 
     console.log(foodList);
-    return foodList.filter((food: string) => {
-      return food.toLowerCase().includes(searchText);
+    return foodList.filter((food: any) => {
+      return food.FoodType.includes(searchText);
     });
   }
 }

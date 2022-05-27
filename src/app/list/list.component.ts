@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   @Input() Foodlist;
+  @Input() Foodnew;
+
   @Input() result;
   searchText = '';
   constructor() {}

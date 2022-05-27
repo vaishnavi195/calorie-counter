@@ -9,7 +9,7 @@ export class AppComponent implements OnInit {
   name = 'Angular ' + VERSION.major;
   Title = 'Calorie Counter';
   Foodlist: any[] = [];
-
+  Foodnew: any[] = ["samv","shhhs"];
   result = this.Foodlist.reduce((accumulator, obj) => {
     return accumulator + obj.calorie;
   }, 0);
