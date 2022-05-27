@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   @Input() Foodlist;
+  @Input() result;
 
   caloriecnt: number[] = [];
   foodname: string;
@@ -34,5 +35,8 @@ export class FormComponent implements OnInit {
       //   '|' +
       //   this.foodcal
     );
+    this.result = this.Foodlist.reduce((accumulator, obj) => {
+      return accumulator + obj.calorie;
+    }, 0);
   }
 }

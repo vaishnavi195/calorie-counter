@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   @Input() Foodlist;
+  @Input() result;
   constructor() {}
   Remove(i: number) {
     this.Foodlist.splice(i, 1);

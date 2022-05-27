@@ -34,5 +34,7 @@ export class AppComponent {
       calorie: 200,
     },
   ];
-  caloriecnt: number[] = [];
+  result = this.Foodlist.reduce((accumulator, obj) => {
+    return accumulator + obj.calorie;
+  }, 0);
 }
