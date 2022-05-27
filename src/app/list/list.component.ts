@@ -11,6 +11,7 @@ export class ListComponent implements OnInit {
   constructor() {}
   Remove(i: number) {
     this.Foodlist.splice(i, 1);
+    localStorage.setItem('FoodList', this.Foodlist);
   }
   ngOnInit() {}
 }

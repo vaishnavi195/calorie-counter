@@ -1,40 +1,20 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   name = 'Angular ' + VERSION.major;
   Title = 'Calorie Counter';
-  Foodlist: any[] = [
-    {
-      Foodname: 'idli',
-      FoodType: 'Breakfast',
-      quantity: '100gms',
-      calorie: 200,
-    },
-    {
-      Foodname: 'dosa',
-      FoodType: 'Breakfast',
-      quantity: '100gms',
-      calorie: 200,
-    },
-    {
-      Foodname: 'sambar sadham',
-      FoodType: 'Breakfast',
-      quantity: '100gms',
-      calorie: 200,
-    },
-    {
-      Foodname: 'chapathi',
-      FoodType: 'Breakfast',
-      quantity: '100gms',
-      calorie: 200,
-    },
-  ];
+  Foodlist: any[] = [];
+
   result = this.Foodlist.reduce((accumulator, obj) => {
     return accumulator + obj.calorie;
   }, 0);
+
+  ngOnInit(){
+
+  }
 }
