@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
   foodnew: string[] = [];
-  transform(foodList: [], searchText: string): any {
+  transform(foodList: [], searchText: string, foodname: []): any {
     if (!foodList) {
       return [];
     }
@@ -15,6 +15,7 @@ export class FilterPipe implements PipeTransform {
 
     console.log(foodList);
     return foodList.filter((food: any) => {
+      // return food.FoodType.includes(searchText);
       return food.FoodType.includes(searchText);
     });
   }

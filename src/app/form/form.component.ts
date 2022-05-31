@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   @Input() Foodlist;
-  @Input() result;
+  resultnew;
+  @Output() result = new EventEmitter();
 
   caloriecnt: number[] = [];
   foodname: string;
@@ -35,9 +36,11 @@ export class FormComponent implements OnInit {
       //   '|' +
       //   this.foodcal
     );
-    this.result = this.Foodlist.reduce((accumulator, obj) => {
+    this.resultnew = this.Foodlist.reduce((accumulator, obj) => {
       return accumulator + obj.calorie;
     }, 0);
+    console.log(this.resultnew);
     localStorage.setItem('FoodList', JSON.stringify(this.Foodlist));
+    this.result.emit(this.resultnew);
   }
 }
