@@ -23,12 +23,7 @@
     <td>Calories</td>
     <td>Action</td>
   </tr>
-  <tr
-    *ngFor="
-      let food of Foodlist | filter: food.foodname:searchText:food.Foodname;
-      let i = index
-    "
-  >
+  <tr *ngFor="let food of Foodlist | filter: searchText; let i = index">
     <td>{{ food.Foodname }}</td>
     <td>{{ food.FoodType }}</td>
     <td>{{ food.quantity }}</td>
