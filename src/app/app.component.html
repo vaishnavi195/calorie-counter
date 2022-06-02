@@ -1,21 +1,5 @@
-<div class="container">
-  <div class="card-row">
-    <div class="card-header">
-      <h1>{{ Title }}</h1>
-    </div>
-    <div class="card-body">
-      <app-form [Foodlist]="Foodlist" (result)="resultnew = $event"></app-form>
-    </div>
-    <div class="card-body">
-      <h1>Today's list({{ Foodlist.length }})</h1>
-      <app-list
-        [Foodlist]="Foodlist"
-        [Foodnew]="Foodnew"
-        (results)="resultnew = $event"
-      ></app-list>
-    </div>
-    <div class="card-body">
-      Total Calories Consumed <label>{{ resultnew }}</label>
-    </div>
-  </div>
-</div>
+<h1>Calorie Counter list</h1>
+<nav>
+  <a routerLink="/group">Calorie Counter</a>
+</nav>
+<router-outlet></router-outlet>

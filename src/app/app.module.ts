@@ -8,10 +8,18 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 
 import { FilterPipe } from './filter.pipe';
+import { RoutingModule } from './routing/routing.module';
+import { GroupComponent } from './group/group.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, FormComponent,ListComponent,FilterPipe],
+  imports: [BrowserModule, FormsModule, RoutingModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    FormComponent,
+    ListComponent,
+    FilterPipe,GroupComponent
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
