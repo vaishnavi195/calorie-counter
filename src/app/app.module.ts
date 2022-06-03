@@ -10,6 +10,8 @@ import { ListComponent } from './list/list.component';
 import { FilterPipe } from './filter.pipe';
 import { RoutingModule } from './routing/routing.module';
 import { GroupComponent } from './group/group.component';
+import { ColoriemenuComponent } from './coloriemenu/coloriemenu.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule],
@@ -18,7 +20,10 @@ import { GroupComponent } from './group/group.component';
     HelloComponent,
     FormComponent,
     ListComponent,
-    FilterPipe,GroupComponent
+    FilterPipe,
+    GroupComponent,
+    ColoriemenuComponent,
+    HomeComponent,
   ],
   bootstrap: [AppComponent],
 })
