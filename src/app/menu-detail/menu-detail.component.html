@@ -1,0 +1,11 @@
+<div *ngIf="menu">
+
+  
+<h2>{{menu.name | uppercase}} Details</h2>
+<div><span>id: </span>{{menu.id}}</div>
+<div>
+  <label for="menu-name">menu name: </label>
+  <input id="menu-name" [(ngModel)]="menu.name" placeholder="name">
+</div>
+
+</div>

@@ -12,6 +12,8 @@ import { RoutingModule } from './routing/routing.module';
 import { GroupComponent } from './group/group.component';
 import { ColoriemenuComponent } from './coloriemenu/coloriemenu.component';
 import { HomeComponent } from './home/home.component';
+import { MenuDetailComponent } from './menu-detail/menu-detail.component';
+import { MenuIndComponent } from './menu-ind/menu-ind.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule],
@@ -23,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     FilterPipe,
     GroupComponent,
     ColoriemenuComponent,
-    HomeComponent,
+    HomeComponent,MenuDetailComponent,MenuIndComponent
   ],
   bootstrap: [AppComponent],
 })
