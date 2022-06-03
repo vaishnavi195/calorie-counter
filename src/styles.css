@@ -8,3 +8,6 @@ li {
 .container {
   padding-top: 100px !important;
 }
+.nav-item {
+  margin-right: 20px;
+}
