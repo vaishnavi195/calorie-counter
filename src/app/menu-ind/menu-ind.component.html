@@ -1,18 +1,17 @@
-<div class="container">
-<h2>My Menu</h2>
-<ul class="heroes">
-  <li *ngFor="let menu of menues">
-    <button
-    
-      type="button"
-      [class.selected]="menu === selectedMenu"
-      (click)="onSelect(menu)"
-    >
-      <span class="badge">{{ menu.id }}</span>
-      <span class="name">{{ menu.name }}</span>
-    </button>
-  </li>
-</ul>
+<div>
+  <h2>{{ Foodname }} Menu</h2>
+  <ul class="heroes">
+    <li *ngFor="let menu of menuesnew">
+      <button
+        type="button"
+        [class.selected]="menu === selectedMenu"
+        (click)="onSelect(menu)"
+      >
+        <span class="badge">{{ menu.id }}</span>
+        <span class="name">{{ menu.name }}</span>
+      </button>
+    </li>
+  </ul>
 
-<app-menu-detail [menu]="selectedMenu"></app-menu-detail>
+  <app-menu-detail [menu]="selectedMenu"></app-menu-detail>
 </div>
