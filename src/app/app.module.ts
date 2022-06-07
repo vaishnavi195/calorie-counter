@@ -14,6 +14,8 @@ import { ColoriemenuComponent } from './coloriemenu/coloriemenu.component';
 import { HomeComponent } from './home/home.component';
 import { MenuDetailComponent } from './menu-detail/menu-detail.component';
 import { MenuIndComponent } from './menu-ind/menu-ind.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule],
@@ -25,7 +27,7 @@ import { MenuIndComponent } from './menu-ind/menu-ind.component';
     FilterPipe,
     GroupComponent,
     ColoriemenuComponent,
-    HomeComponent,MenuDetailComponent,MenuIndComponent
+    HomeComponent,MenuDetailComponent,MenuIndComponent,LoginComponent,RegisterComponent
   ],
   bootstrap: [AppComponent],
 })
