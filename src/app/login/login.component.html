@@ -46,7 +46,6 @@
               [(ngModel)]="model.emailid"
               name="emailID"
               #emailid="ngModel"
-              
               pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               placeholder="Enter a valid email address"
             />
@@ -104,12 +103,13 @@
               class="btn btn-danger btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;"
               [disabled]="!heroForm.form.valid"
+              routerLink="/home"
             >
               Login
             </button>
             <p class="small fw-bold mt-2 pt-1 mb-0">
               Don't have an account?
-              <a href="#!" class="link-danger">Register</a>
+              <a routerLink="/register" class="link-danger">Register</a>
             </p>
           </div>
         </form>
