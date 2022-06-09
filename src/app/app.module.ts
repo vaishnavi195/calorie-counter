@@ -16,6 +16,7 @@ import { MenuDetailComponent } from './menu-detail/menu-detail.component';
 import { MenuIndComponent } from './menu-ind/menu-ind.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuardGuard } from './auth-guard.guard';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule],
@@ -27,8 +28,13 @@ import { RegisterComponent } from './register/register.component';
     FilterPipe,
     GroupComponent,
     ColoriemenuComponent,
-    HomeComponent,MenuDetailComponent,MenuIndComponent,LoginComponent,RegisterComponent
+    HomeComponent,
+    MenuDetailComponent,
+    MenuIndComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
+  providers: [AuthGuardGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

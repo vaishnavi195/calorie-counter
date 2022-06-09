@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Hero, login } from '../hero';
 @Component({
   selector: 'app-login',
@@ -6,6 +7,7 @@ import { Hero, login } from '../hero';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  @ViewChild('heroForm') public loginform:NgForm
   emailID: any = '';
   password: any = '';
 
